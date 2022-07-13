@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
+
 </head>
 
 <body class="page__body">
@@ -238,6 +239,19 @@
 
     </div>
   </div>
+
+  <script>
+    const getHeaderHeight = () => {
+      const headerHeight =
+        document.querySelector('.header').offsetHeight
+      document.documentElement.style.setProperty(
+        '--header-height',
+        `${headerHeight}px`,
+      )
+    }
+    getHeaderHeight()
+    window.addEventListener('resize', getHeaderHeight)
+  </script>
 </header>
 
     <main class="main">
